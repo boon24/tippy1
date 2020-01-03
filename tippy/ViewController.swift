@@ -19,9 +19,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        billField.becomeFirstResponder()
+    }
 
     @IBAction func onTap(_ sender: Any) {
-        print("hello")
         view.endEditing(true)
     }
     @IBAction func calculateTip(_ sender: Any) {
